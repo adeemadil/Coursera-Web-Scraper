@@ -78,5 +78,16 @@ for url in urls:
 
     result.append(temp)
 
-print(result)
+for item in result:
+    # print('Opening:\n', item, '\n')
+    for k,v in item.items():
+        if( k == 'Roles' or k == 'Basic Qualifications' or k == 'Preffered Qualifications'):
+            print(k , ":")
+            for list_item in v:
+                print(list_item)
+            print("\n")
+        else:
+            print(k, ":\n", v)
+            print('\n')
+    print('\n')
     
